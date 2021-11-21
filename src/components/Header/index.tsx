@@ -1,18 +1,16 @@
-
 import React from 'react'
 import { Text } from 'rebass'
 import styled from 'styled-components'
-import Logo from '../../assets/svg/logo.svg'
-import LogoDark from '../../assets/svg/logo_white.svg'
-import IconDay from '../../assets/images/icon/day.svg'
-import IconNight from '../../assets/images/icon/night.svg'
+// import Logo from '../../assets/svg/logo.svg'
+// import LogoDark from '../../assets/svg/logo_white.svg'
+// import IconDay from '../../assets/images/icon/day.svg'
+// import IconNight from '../../assets/images/icon/night.svg'
 
 import { useActiveWeb3React } from '../../hooks'
-import { useDarkModeManager, useUserSelectChainId } from '../../state/user/hooks'
+import { useUserSelectChainId } from '../../state/user/hooks' // useDarkModeManager
 import { useETHBalances } from '../../state/wallet/hooks'
 
-import { ExternalLink } from '../../theme'
-
+// import { ExternalLink } from '../../theme'
 // import Row, { RowFixed } from '../Row'
 import { RowFixed } from '../Row'
 import Web3Status from '../Web3Status'
@@ -20,14 +18,12 @@ import SelectNetwork from './SelectNetwork'
 // import usePrevious from '../../hooks/usePrevious'
 import config from '../../config'
 
-
-
-
 const HeaderFrame = styled.div`
   display: flex;
   grid-template-columns: 1fr 120px;
   align-items: center;
-  justify-content: space-between;
+  // justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: row;
   width: 100%;
@@ -35,7 +31,7 @@ const HeaderFrame = styled.div`
   position: relative;
   padding: 0.875rem 1rem;
   z-index: 2;
-  height: 70px;
+  height: 40px;
 
   max-width: 1440px;
   ${({ theme }) => theme.mediaWidth.upToMedium`
@@ -70,16 +66,16 @@ const HeaderControls = styled.div`
   `};
 `
 
-const HeaderElement = styled.div`
-  display: flex;
-  align-items: center;
-  gap: 8px;
+// const HeaderElement = styled.div`
+//   display: flex;
+//   align-items: center;
+//   gap: 8px;
 
-  ${({ theme }) => theme.mediaWidth.upToMedium`
-   flex-direction: row-reverse;
-    align-items: center;
-  `};
-`
+//   ${({ theme }) => theme.mediaWidth.upToMedium`
+//    flex-direction: row-reverse;
+//     align-items: center;
+//   `};
+// `
 const HeaderRow = styled(RowFixed)`
   position: relative;
   height: 100%;
@@ -112,58 +108,58 @@ const BalanceText = styled(Text)`
   `};
 `
 
-const Title = styled.a`
-  display: flex;
-  align-items: center;
-  pointer-events: auto;
-  justify-self: flex-start;
-  margin-right: 12px;
-  height: 100%;
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    justify-self: center;
-    margin-right: 2px;
-  `};
-  :hover {
-    cursor: pointer;
-  }
-`
+// const Title = styled.a`
+//   display: flex;
+//   align-items: center;
+//   pointer-events: auto;
+//   justify-self: flex-start;
+//   margin-right: 12px;
+//   height: 100%;
+//   ${({ theme }) => theme.mediaWidth.upToSmall`
+//     justify-self: center;
+//     margin-right: 2px;
+//   `};
+//   :hover {
+//     cursor: pointer;
+//   }
+// `
 
-const UniIcon = styled.div`
-  ${({ theme }) => theme.flexSC};
-  height: 100%;
-  img {
-    height:42px
-  }
-  ${({ theme }) => theme.mediaWidth.upToSmall`
-    img {
-      height:36px
-    }
-  `};
-`
+// const UniIcon = styled.div`
+//   ${({ theme }) => theme.flexSC};
+//   height: 100%;
+//   img {
+//     height:42px
+//   }
+//   ${({ theme }) => theme.mediaWidth.upToSmall`
+//     img {
+//       height:36px
+//     }
+//   `};
+// `
 
-const StyleDarkToggle = styled.div`
-  ${({ theme }) => theme.flexC};
-  width: 36px;
-  min-width: 36px;
-  height: 36px;
-  border-radius: 9px;
-  margin-left: 15px;
-  cursor: pointer;
-  background-color: ${({ theme }) => theme.lightPuroleBg};
-  @media screen and (max-width: 960px) {
-    margin-left: 5px;
-  }
-`
+// const StyleDarkToggle = styled.div`
+//   ${({ theme }) => theme.flexC};
+//   width: 36px;
+//   min-width: 36px;
+//   height: 36px;
+//   border-radius: 9px;
+//   margin-left: 15px;
+//   cursor: pointer;
+//   background-color: ${({ theme }) => theme.lightPuroleBg};
+//   @media screen and (max-width: 960px) {
+//     margin-left: 5px;
+//   }
+// `
 
-const VersionLinkBox = styled(ExternalLink)`
-  ${({theme}) => theme.flexSC}
-  text-decoration: none;
-  color: rgb(115, 75, 226);
-  line-height: 26px;
-  margin-top: 17px;
-  font-size: 18px;
-  font-weight:bold;
-`
+// const VersionLinkBox = styled(ExternalLink)`
+//   ${({theme}) => theme.flexSC}
+//   text-decoration: none;
+//   color: rgb(115, 75, 226);
+//   line-height: 26px;
+//   margin-top: 17px;
+//   font-size: 18px;
+//   font-weight:bold;
+// `
 
 export default function Header() {
   const { account, chainId } = useActiveWeb3React()
@@ -171,22 +167,22 @@ export default function Header() {
   // const { t } = useTranslation()
 
   const userEthBalance = useETHBalances(account ? [account] : [])?.[account ?? '']
-  const [isDark, toggleDarkMode] = useDarkModeManager()
+  // const [isDark, toggleDarkMode] = useDarkModeManager()
   // console.log(userEthBalance)
   return (
     <HeaderFrame>
       <HeaderRow>
-        <Title href="https://anyswap.exchange" target="__blank">
-          <UniIcon>
+        {/* <Title href="/"> */}
+          {/* <UniIcon>
             <img src={isDark ? LogoDark : Logo} alt="logo" />
-          </UniIcon>
-        </Title>
-        <VersionLinkBox href='https://v1.anyswap.exchange'>
+          </UniIcon> */}
+        {/* </Title> */}
+        {/* <VersionLinkBox href='https://v1.anyswap.exchange'>
           V1↗
-        </VersionLinkBox>
+        </VersionLinkBox> */}
       </HeaderRow>
       <HeaderControls>
-        <HeaderElement>
+        {/* <HeaderElement> */}
           <SelectNetwork />
           {selectNetworkInfo && selectNetworkInfo?.label === 'BTC' ? '' : (
             <AccountElement active={!!account} style={{ pointerEvents: 'auto' }}>
@@ -198,7 +194,7 @@ export default function Header() {
               <Web3Status />
             </AccountElement>
           )}
-          <StyleDarkToggle
+          {/* <StyleDarkToggle
             onClick={() => {
               toggleDarkMode()
             }}
@@ -212,8 +208,8 @@ export default function Header() {
                 <img src={IconNight} alt="" />
               )
             }
-          </StyleDarkToggle>
-        </HeaderElement>
+          </StyleDarkToggle> */}
+        {/* </HeaderElement> */}
       </HeaderControls>
     </HeaderFrame>
   )

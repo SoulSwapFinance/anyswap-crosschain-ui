@@ -21,7 +21,7 @@ import { AutoRow } from '../../components/Row'
 import Loader from '../../components/Loader'
 import AddressInputPanel from '../../components/AddressInputPanel'
 import { ArrowWrapper, BottomGrouping } from '../../components/swap/styleds'
-import Title from '../../components/Title'
+// import Title from '../../components/Title'
 import ModalContent from '../../components/Modal/ModalContent'
 
 // import { useWalletModalToggle, useToggleNetworkModal } from '../../state/application/hooks'
@@ -542,7 +542,7 @@ export default function CrossChain() {
         </ConfirmContent>
       </ModalContent>
       <AppBody>
-        <Title
+        {/* <Title
           title={config.getCurConfigInfo().isOpenBridge ? t('router') : t('swap')}
           
           isNavLink={config.getCurConfigInfo().isOpenBridge ? true : false}
@@ -562,7 +562,7 @@ export default function CrossChain() {
               iconActiveUrl: require('../../assets/images/icon/pool-purpl.svg')
             }
           ] : []}
-        ></Title>
+        ></Title> */}
         <AutoColumn gap={'sm'}>
 
           <SelectCurrencyInputPanel
