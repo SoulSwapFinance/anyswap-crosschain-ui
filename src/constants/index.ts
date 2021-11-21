@@ -41,22 +41,22 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     href: null,
     color: '#E8831D'
   },
-  OKEXCHAIN: {
-    connector: injected,
-    name: 'OKEx',
-    iconName: 'OKT.png',
-    description: 'Easy-to-use browser extension.',
-    href: null,
-    color: '#E8831D'
-  },
-  COIN98: {
-    connector: injected,
-    name: 'Coin98',
-    iconName: 'Coin98.png',
-    description: 'Easy-to-use browser extension.',
-    href: null,
-    color: '#E8831D'
-  },
+  // OKEXCHAIN: {
+  //   connector: injected,
+  //   name: 'OKEx',
+  //   iconName: 'OKT.png',
+  //   description: 'Easy-to-use browser extension.',
+  //   href: null,
+  //   color: '#E8831D'
+  // },
+  // COIN98: {
+  //   connector: injected,
+  //   name: 'Coin98',
+  //   iconName: 'Coin98.png',
+  //   description: 'Easy-to-use browser extension.',
+  //   href: null,
+  //   color: '#E8831D'
+  // },
   WALLET_CONNECT: {
     connector: walletconnect,
     name: 'WalletConnect',

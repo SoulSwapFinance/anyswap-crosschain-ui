@@ -480,13 +480,13 @@ export default function NavList() {
               <img src={require('../../assets/images/icon/medium-white.svg')} className="on" alt="" />
             </div>
           </Link>
-          <Link id="link" href="https://twitter.com/AnyswapNetwork">
+          <Link id="link" href="https://twitter.com/SoulSwapFinance">
             <div className="icon">
               <img src={require('../../assets/images/icon/twitter.svg')} className="off" alt="" />
               <img src={require('../../assets/images/icon/twitter-white.svg')} className="on" alt="" />
             </div>
           </Link>
-          <Link id="link" href="https://github.com/anyswap">
+          <Link id="link" href="https://github.com/soulswapfinance">
             <div className="icon">
               <img src={require('../../assets/images/icon/github.png')} className="off" alt="" />
               <img src={require('../../assets/images/icon/github-white.png')} className="on" alt="" />
@@ -509,7 +509,7 @@ export default function NavList() {
           <h5>
             Powered by <span>Fusion DCRM</span>
           </h5>
-          <p>© 2020 Anyswap. All rights reserved.</p>
+          <p>© 2021 SoulSwap. All rights reserved.</p>
         </CopyRightBox>
       </OutLink>
     </>

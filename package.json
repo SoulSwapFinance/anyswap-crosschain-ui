@@ -1,7 +1,7 @@
 {
-  "name": "anyswap-crosschain",
+  "name": "soulswap-crosschain",
   "version": "0.1.1",
-  "description": "Anyswap CrossChain",
+  "description": "SoulSwap CrossChain",
   "homepage": "/",
   "private": true,
   "devDependencies": {

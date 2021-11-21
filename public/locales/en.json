@@ -255,7 +255,7 @@
   "ViewLiquidity": "Connect to a wallet to view your liquidity.",
   "AccountAnalytics": "Account analytics and accrued fees",
   "NoLiquidity": "No liquidity found.",
-  "hasV1Liquidity": "Anyswap V1 liquidity found!",
+  "hasV1Liquidity": "SoulSwap V1 liquidity found!",
   "hasV1Liquidity1": "Don't see a pool you joined?",
   "MigrateNow": "Migrate now.",
   "ImportIt": "Import it.",

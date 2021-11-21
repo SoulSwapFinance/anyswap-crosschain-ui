@@ -229,7 +229,7 @@
   "ShareOfPool": "矿池份额",
   "Rates": "比率",
   "Deposited": "充值",
-  "brokenToken": "所选令牌与Anyswap V1不兼容。增加流动性将导致资金锁定。",
+  "brokenToken": "SoulSwap V1不兼容。增加流动性将导致资金锁定。",
   "toleranceExplanation": "降低这个限制可以降低你的先发制人的风险。然而，这使得你的交易更有可能由于正常的价格变动而失败。",
   "tokenSearchPlaceholder": "搜索名称或粘贴地址",
   "dashboard": "资产",
