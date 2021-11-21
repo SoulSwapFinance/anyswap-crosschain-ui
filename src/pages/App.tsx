@@ -10,11 +10,11 @@ import Web3ReactManager from '../components/Web3ReactManager'
 // import Bridge from './Bridge'
 // import Dashboard from './Dashboard'
 
-import CrossChain from './CrossChain'
+// import CrossChain from './CrossChain'
 import Bridge from './Bridge'
 
-import MergeCrossChain from './MergeCrossChain'
-import MergeCrossChainV2 from './MergeCrossChainV2'
+// import MergeCrossChain from './MergeCrossChain'
+// import MergeCrossChainV2 from './MergeCrossChainV2'
 // import Pools from './Pools'
 // import PoolList from './Pools/poolList'
 // import CrossChainTxns from './CrossChainTxns'
@@ -146,8 +146,9 @@ export default function App() {
               <Route exact strict path="/nft" component={() => <CrossNFT />} />
               <Route exact strict path="/cross-chain-txns" component={() => <CrossChainTxns />} /> */}
               <Route exact strict path="/bridge" component={() => <Bridge />} />
-              <Route exact strict path={config.getCurConfigInfo().isOpenBridge ? "/router" : "/swap"} component={() => <CrossChain />} />
-              <Route
+              {/* <Route exact strict path={config.getCurConfigInfo().isOpenBridge ? "/router" : "/swap"} component={() => <CrossChain />} /> */}
+              <Route exact strict path={config.getCurConfigInfo().isOpenBridge ? "/router" : "/swap"} component={() => <Bridge />} />
+              {/* <Route
                 path={[
                   '/cross-chain-router',
                   '/cross-chain-bridge',
@@ -160,7 +161,7 @@ export default function App() {
                   '/v2/mergeswap'
                 ]}
                 component={() => <MergeCrossChainV2 />}
-              />
+              /> */}
               {
                 Object.keys(farmlist).map((key, index) => {
                   if (farmlist[key].farmtype === 'noany') {
