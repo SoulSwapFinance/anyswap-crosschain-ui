@@ -848,7 +848,7 @@ export default function CrossChain() {
             ) : ''
           }
 
-          {/* <AutoRow justify="center" style={{ padding: '0 1rem' }}>
+          <AutoRow justify="center" style={{ padding: '0 1rem' }}>
             <ArrowWrapper clickable={false} style={{cursor:'pointer'}} onClick={() => {
               // toggleNetworkModal()
               
@@ -856,7 +856,7 @@ export default function CrossChain() {
             }}>
               <ArrowDown size="16" color={theme.text2} />
             </ArrowWrapper>
-          </AutoRow> */}
+          </AutoRow>
           <AutoRow justify="center" style={{ padding: '0 1rem' }}>
             <ArrowWrapper clickable={false} style={{cursor:'pointer'}} onClick={() => {
               // toggleNetworkModal()

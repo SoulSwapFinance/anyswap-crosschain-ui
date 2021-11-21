@@ -31,6 +31,13 @@ export const tokenList = [
     "symbol": "BNB"
   },
   {
+    "address": "0x4E15361FD6b4BB609Fa63C81A2be19d873717870",
+    "chainId": ETH_MAIN_CHAINID,
+    "decimals": 18,
+    "name": "FTM",
+    "symbol": "FTM"
+  },
+  {
     "address": "0x4fabb145d64652a948d72533023f6e7a623c7c53",
     "chainId": ETH_MAIN_CHAINID,
     "decimals": 18,
