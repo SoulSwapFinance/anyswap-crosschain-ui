@@ -22,7 +22,7 @@ import { AutoRow } from '../../components/Row'
 import Loader from '../../components/Loader'
 import AddressInputPanel from '../../components/AddressInputPanel'
 import { ArrowWrapper, BottomGrouping } from '../../components/swap/styleds'
-import Title from '../../components/Title'
+// import Title from '../../components/Title'
 import ModalContent from '../../components/Modal/ModalContent'
 import QRcode from '../../components/QRcode'
 
@@ -55,6 +55,7 @@ import {
   FlexEC,
   ListBox
 } from '../styled'
+import { ExternalLink } from '../../theme'
 
 let intervalFN:any = ''
 
@@ -738,7 +739,7 @@ export default function CrossChain() {
         onDismiss={() => {
           setModalSpecOpen(false)
         }}
-      >
+        >
         <ListBox>
           <div className="item">
             <p className="label">Value:</p>
@@ -787,7 +788,8 @@ export default function CrossChain() {
         </ConfirmContent>
       </ModalContent>
       <AppBody>
-        <Title
+
+        {/* <Title
           title={t('bridge')} 
           // tabList={TitleList}
           currentTab={(() => {
@@ -796,8 +798,11 @@ export default function CrossChain() {
             if (swapType === BridgeType.deposit) return 1
             return 0
           })()}
-        ></Title>
+        ></Title> */}
         <AutoColumn gap={'sm'}>
+        <ExternalLink href='https://bridge.soulswap.finance' target='_blank'>
+          Click Here For Mobile View
+        </ExternalLink>
 
           <SelectCurrencyInputPanel
             label={t('From')}
