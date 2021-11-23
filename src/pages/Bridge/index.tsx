@@ -107,7 +107,7 @@ export default function CrossChain() {
   const [selectChainList, setSelectChainList] = useState<Array<any>>([])
   const [recipient, setRecipient] = useState<any>(account ?? '')
   const [viewRrecipient, setViewRecipient] = useState<any>(false)
-  const [swapType, setSwapType] = useState(initSwapType ? initSwapType : BridgeType.bridge)
+  const [swapType] = useState(initSwapType ? initSwapType : BridgeType.bridge) // setSwapType
   const [count, setCount] = useState<number>(0)
   const [intervalCount, setIntervalCount] = useState<number>(0)
 
@@ -404,41 +404,38 @@ export default function CrossChain() {
   //   }
   // }, [selectChain])
   // console.log(oldSymbol)
-  
 
-  
-
-  const TitleList = useMemo(() => {
-    const arr = [
-      {
-        // name: t('bridge'),
-        name: 'EVM',
-        onTabClick: () => {
-          if (swapType !== BridgeType.bridge) {
-            sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
-            setSelectCurrency('')
-            setSwapType(BridgeType.bridge)
-          }
-        },
-        iconTxt: 'E'
-      }
-    ]
-    if (allTokens?.deposit && Object.keys(allTokens?.deposit).length > 0) {
-      arr.push({
-        // name: t('Deposited'),
-        name: 'BTC',
-        onTabClick: () => {
-          if (swapType !== BridgeType.deposit) {
-            sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
-            setSelectCurrency('')
-            setSwapType(BridgeType.deposit)
-          }
-        },
-        iconTxt: 'B'
-      })
-    }
-    return arr
-  }, [allTokens, swapType])
+  // const TitleList = useMemo(() => {
+  //   const arr = [
+  //     {
+  //       // name: t('bridge'),
+  //       name: 'EVM',
+  //       onTabClick: () => {
+  //         if (swapType !== BridgeType.bridge) {
+  //           sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
+  //           setSelectCurrency('')
+  //           setSwapType(BridgeType.bridge)
+  //         }
+  //       },
+  //       iconTxt: 'E'
+  //     }
+  //   ]
+  //   if (allTokens?.deposit && Object.keys(allTokens?.deposit).length > 0) {
+  //     arr.push({
+  //       // name: t('Deposited'),
+  //       name: 'BTC',
+  //       onTabClick: () => {
+  //         if (swapType !== BridgeType.deposit) {
+  //           sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
+  //           setSelectCurrency('')
+  //           setSwapType(BridgeType.deposit)
+  //         }
+  //       },
+  //       iconTxt: 'B'
+  //     })
+  //   }
+  //   return arr
+  // }, [allTokens, swapType])
   // console.log(selectCurrency)
   // console.log(swapType)
   
@@ -792,7 +789,7 @@ export default function CrossChain() {
       <AppBody>
         <Title
           title={t('bridge')} 
-          tabList={TitleList}
+          // tabList={TitleList}
           currentTab={(() => {
             // if (swapType === BridgeType.swapin) return 0
             if (swapType === BridgeType.bridge) return 0
