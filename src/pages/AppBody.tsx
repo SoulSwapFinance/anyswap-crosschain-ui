@@ -14,7 +14,7 @@ export const BodyWrapper = styled.div`
 
 const BodyContent = styled.div`
   position: absolute;
-  top: 70px;
+  top: 40px;
   right: 0;
   bottom: 0;
   left: 320px;

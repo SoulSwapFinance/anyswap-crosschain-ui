@@ -22,7 +22,7 @@ import { AutoRow } from '../../components/Row'
 import Loader from '../../components/Loader'
 import AddressInputPanel from '../../components/AddressInputPanel'
 import { ArrowWrapper, BottomGrouping } from '../../components/swap/styleds'
-import Title from '../../components/Title'
+// import Title from '../../components/Title'
 import ModalContent from '../../components/Modal/ModalContent'
 import QRcode from '../../components/QRcode'
 
@@ -55,6 +55,7 @@ import {
   FlexEC,
   ListBox
 } from '../styled'
+import { ExternalLink } from '../../theme'
 
 let intervalFN:any = ''
 
@@ -107,7 +108,7 @@ export default function CrossChain() {
   const [selectChainList, setSelectChainList] = useState<Array<any>>([])
   const [recipient, setRecipient] = useState<any>(account ?? '')
   const [viewRrecipient, setViewRecipient] = useState<any>(false)
-  const [swapType, setSwapType] = useState(initSwapType ? initSwapType : BridgeType.bridge)
+  const [swapType] = useState(initSwapType ? initSwapType : BridgeType.bridge) // setSwapType
   const [count, setCount] = useState<number>(0)
   const [intervalCount, setIntervalCount] = useState<number>(0)
 
@@ -404,41 +405,38 @@ export default function CrossChain() {
   //   }
   // }, [selectChain])
   // console.log(oldSymbol)
-  
 
-  
-
-  const TitleList = useMemo(() => {
-    const arr = [
-      {
-        // name: t('bridge'),
-        name: 'EVM',
-        onTabClick: () => {
-          if (swapType !== BridgeType.bridge) {
-            sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
-            setSelectCurrency('')
-            setSwapType(BridgeType.bridge)
-          }
-        },
-        iconTxt: 'E'
-      }
-    ]
-    if (allTokens?.deposit && Object.keys(allTokens?.deposit).length > 0) {
-      arr.push({
-        // name: t('Deposited'),
-        name: 'BTC',
-        onTabClick: () => {
-          if (swapType !== BridgeType.deposit) {
-            sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
-            setSelectCurrency('')
-            setSwapType(BridgeType.deposit)
-          }
-        },
-        iconTxt: 'B'
-      })
-    }
-    return arr
-  }, [allTokens, swapType])
+  // const TitleList = useMemo(() => {
+  //   const arr = [
+  //     {
+  //       // name: t('bridge'),
+  //       name: 'EVM',
+  //       onTabClick: () => {
+  //         if (swapType !== BridgeType.bridge) {
+  //           sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
+  //           setSelectCurrency('')
+  //           setSwapType(BridgeType.bridge)
+  //         }
+  //       },
+  //       iconTxt: 'E'
+  //     }
+  //   ]
+  //   if (allTokens?.deposit && Object.keys(allTokens?.deposit).length > 0) {
+  //     arr.push({
+  //       // name: t('Deposited'),
+  //       name: 'BTC',
+  //       onTabClick: () => {
+  //         if (swapType !== BridgeType.deposit) {
+  //           sessionStorage.setItem(SelectBridgeCurrencyLabel, '')
+  //           setSelectCurrency('')
+  //           setSwapType(BridgeType.deposit)
+  //         }
+  //       },
+  //       iconTxt: 'B'
+  //     })
+  //   }
+  //   return arr
+  // }, [allTokens, swapType])
   // console.log(selectCurrency)
   // console.log(swapType)
   
@@ -741,7 +739,7 @@ export default function CrossChain() {
         onDismiss={() => {
           setModalSpecOpen(false)
         }}
-      >
+        >
         <ListBox>
           <div className="item">
             <p className="label">Value:</p>
@@ -790,17 +788,21 @@ export default function CrossChain() {
         </ConfirmContent>
       </ModalContent>
       <AppBody>
-        <Title
+
+        {/* <Title
           title={t('bridge')} 
-          tabList={TitleList}
+          // tabList={TitleList}
           currentTab={(() => {
             // if (swapType === BridgeType.swapin) return 0
             if (swapType === BridgeType.bridge) return 0
             if (swapType === BridgeType.deposit) return 1
             return 0
           })()}
-        ></Title>
+        ></Title> */}
         <AutoColumn gap={'sm'}>
+        <ExternalLink href='https://bridge.soulswap.finance' target='_blank'>
+          Click Here For Mobile View
+        </ExternalLink>
 
           <SelectCurrencyInputPanel
             label={t('From')}

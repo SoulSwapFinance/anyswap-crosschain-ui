@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { NavLink } from 'react-router-dom'
+import React from 'react' // useState
+// import { NavLink } from 'react-router-dom'
 import styled from 'styled-components'
 
 const TitleBox = styled.div`
@@ -19,140 +19,140 @@ const TitleTxt = styled.div`
   //   display:none;
   // `}
 `
-const TabLinkBox = styled.ul`
-  ${({ theme }) => theme.flexSC}
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  li {
-    ${({ theme }) => theme.flexC}
-    height: 38px;
-    font-family: 'Manrope';
-    font-size: 0.75rem;
-    font-weight: 500;
-    font-stretch: normal;
-    font-style: normal;
-    letter-spacing: normal;
-    color: #96989e;
-    border-top: 0.0625rem solid rgba(0, 0, 0, 0.04);
-    border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.04);
-    border-left: 0.0625rem solid rgba(0, 0, 0, 0.04);
-    cursor: pointer;
-    text-decoration: none;
-    padding: 0 0.625rem;
-    background: ${({ theme }) => theme.tabBg};
-    white-space: nowrap;
+// const TabLinkBox = styled.ul`
+//   ${({ theme }) => theme.flexSC}
+//   list-style: none;
+//   margin: 0;
+//   padding: 0;
+//   li {
+//     ${({ theme }) => theme.flexC}
+//     height: 38px;
+//     font-family: 'Manrope';
+//     font-size: 0.75rem;
+//     font-weight: 500;
+//     font-stretch: normal;
+//     font-style: normal;
+//     letter-spacing: normal;
+//     color: #96989e;
+//     border-top: 0.0625rem solid rgba(0, 0, 0, 0.04);
+//     border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.04);
+//     border-left: 0.0625rem solid rgba(0, 0, 0, 0.04);
+//     cursor: pointer;
+//     text-decoration: none;
+//     padding: 0 0.625rem;
+//     background: ${({ theme }) => theme.tabBg};
+//     white-space: nowrap;
 
-    .icon {
-      ${({ theme }) => theme.flexC}
-      width: 28px;
-      height: 28px;
-      background: #f5f5f5;
-      border-radius: 100%;
-      margin-right: 0.625rem;
-      padding: 6px;
-      font-size: 16px;
-      img {
-        display: block;
-        width: 100%;
-      }
-    }
-    &:first-child {
-      border-top-left-radius: 6px;
-      border-bottom-left-radius: 6px;
-      &.active {
-        border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
-      }
-    }
-    &:last-child {
-      border-top-right-radius: 6px;
-      border-bottom-right-radius: 6px;
-      border-right: 0.0625rem solid rgba(0, 0, 0, 0.04);
-      &.active {
-        border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
-      }
-    }
+//     .icon {
+//       ${({ theme }) => theme.flexC}
+//       width: 28px;
+//       height: 28px;
+//       background: #f5f5f5;
+//       border-radius: 100%;
+//       margin-right: 0.625rem;
+//       padding: 6px;
+//       font-size: 16px;
+//       img {
+//         display: block;
+//         width: 100%;
+//       }
+//     }
+//     &:first-child {
+//       border-top-left-radius: 6px;
+//       border-bottom-left-radius: 6px;
+//       &.active {
+//         border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
+//       }
+//     }
+//     &:last-child {
+//       border-top-right-radius: 6px;
+//       border-bottom-right-radius: 6px;
+//       border-right: 0.0625rem solid rgba(0, 0, 0, 0.04);
+//       &.active {
+//         border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
+//       }
+//     }
 
-    &.active {
-      background: ${({ theme }) => theme.tabActiveBg};
-      border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
-      color: ${({ theme }) => theme.tabActiveColor};
-      font-weight: bold;
-      .icon {
-        background: #734be2;
-        color:#fff;
-      }
-    }
-    @media screen and (max-width: 960px) {
-      .icon {
-        display: none;
-      }
-    }
-  }
-`
-const activeClassName = 'active'
-const StyledNavLink = styled(NavLink).attrs({
-  activeClassName
-})`
-  ${({ theme }) => theme.flexC}
-  height: 38px;
-  font-family: 'Manrope';
-  font-size: 0.75rem;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  letter-spacing: normal;
-  color: ${({ theme }) => theme.tabColor};
-  border-top: 0.0625rem solid rgba(0, 0, 0, 0.04);
-  border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.04);
-  border-left: 0.0625rem solid rgba(0, 0, 0, 0.04);
-  cursor:pointer;
-  text-decoration: none;
-  padding: 0 0.625rem;
-  background: ${({ theme }) => theme.tabBg};
-  white-space:nowrap;
+//     &.active {
+//       background: ${({ theme }) => theme.tabActiveBg};
+//       border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
+//       color: ${({ theme }) => theme.tabActiveColor};
+//       font-weight: bold;
+//       .icon {
+//         background: #734be2;
+//         color:#fff;
+//       }
+//     }
+//     @media screen and (max-width: 960px) {
+//       .icon {
+//         display: none;
+//       }
+//     }
+//   }
+// `
+// const activeClassName = 'active'
+// const StyledNavLink = styled(NavLink).attrs({
+  // activeClassName
+// })`
+  // ${({ theme }) => theme.flexC}
+  // height: 38px;
+  // font-family: 'Manrope';
+  // font-size: 0.75rem;
+  // font-weight: 500;
+  // font-stretch: normal;
+  // font-style: normal;
+  // letter-spacing: normal;
+  // color: ${({ theme }) => theme.tabColor};
+  // border-top: 0.0625rem solid rgba(0, 0, 0, 0.04);
+  // border-bottom: 0.0625rem solid rgba(0, 0, 0, 0.04);
+  // border-left: 0.0625rem solid rgba(0, 0, 0, 0.04);
+  // cursor:pointer;
+  // text-decoration: none;
+  // padding: 0 0.625rem;
+  // background: ${({ theme }) => theme.tabBg};
+  // white-space:nowrap;
 
-  .icon {
-    ${({ theme }) => theme.flexC}
-    width: 28px;
-    height: 28px;
-    background:#f5f5f5;
-    border-radius:100%;
-    margin-right:0.625rem;
-    font-size: 16px;
-  }
-  &:first-child {
-    border-top-left-radius: 6px;
-    border-bottom-left-radius: 6px;
-    &.active {
-      border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
-    }
-  }
-  &:last-child {
-    border-top-right-radius: 6px;
-    border-bottom-right-radius: 6px;
-    border-right: 0.0625rem solid rgba(0, 0, 0, 0.04);
-    &.active {
-      border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
-    }
-  }
+//   .icon {
+//     ${({ theme }) => theme.flexC}
+//     width: 28px;
+//     height: 28px;
+//     background:#f5f5f5;
+//     border-radius:100%;
+//     margin-right:0.625rem;
+//     font-size: 16px;
+//   }
+//   &:first-child {
+//     border-top-left-radius: 6px;
+//     border-bottom-left-radius: 6px;
+//     &.active {
+//       border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
+//     }
+//   }
+//   &:last-child {
+//     border-top-right-radius: 6px;
+//     border-bottom-right-radius: 6px;
+//     border-right: 0.0625rem solid rgba(0, 0, 0, 0.04);
+//     &.active {
+//       border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
+//     }
+//   }
 
-  &.${activeClassName} {
-    background: ${({ theme }) => theme.tabActiveBg};
-    border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
-    color: ${({ theme }) => theme.tabActiveColor};
-    font-weight: bold;
-    .icon {
-      background: #734be2;
-      color:#fff;
-    }
-  }
-  @media screen and (max-width: 960px) {
-    .icon {
-      display:none;
-    }
-  }
-`
+//   &.${activeClassName} {
+//     background: ${({ theme }) => theme.tabActiveBg};
+//     border: 0.0625rem solid ${({ theme }) => theme.tabBdColor};
+//     color: ${({ theme }) => theme.tabActiveColor};
+//     font-weight: bold;
+//     .icon {
+//       background: #734be2;
+//       color:#fff;
+//     }
+//   }
+//   @media screen and (max-width: 960px) {
+//     .icon {
+//       display:none;
+//     }
+//   }
+// `
 
 interface TabList {
   name: string
@@ -172,83 +172,89 @@ interface Title {
   children?: any
 }
 
-export default function Title({ title, tabList = [] , isNavLink = false, currentTab, isChangeTitle, children}:Title) {
-  const [tabIndex, setTabIndex] = useState(0)
-  const [tabName, setTabName] = useState('')
-  const pathname = window.location.hash
-  const activeTabKey = tabList.length > 0 ? tabList[tabList.findIndex(({ regex }) => pathname.match(regex))].name : ''
+export default function Title({ title, children}:Title) {
+// export default function Title({ title, tabList = [] , isNavLink = false, currentTab, isChangeTitle, children}:Title) {
+  // const [tabIndex, setTabIndex] = useState(0)
+  // const [tabName, setTabName] = useState('')
+  // const pathname = window.location.hash
+  // const activeTabKey = tabList.length > 0 ? tabList[tabList.findIndex(({ regex }) => pathname.match(regex))].name : ''
   
-  function tabListView() {
-    if (isNavLink) {
-      return (
-        <>
-          <TabLinkBox>
-            {tabList.map(({ path, name, regex, iconUrl, iconActiveUrl }) => (
-              <StyledNavLink
-                key={path}
-                to={path}
-                isActive={(_, { pathname }) => Boolean(pathname.match(regex))}
-              > 
-                {
-                  iconActiveUrl && iconUrl ? (
-                    <div className='icon'>
-                      <img alt={''} src={pathname.match(regex) ? iconActiveUrl : iconUrl}/>
-                    </div>
-                  ) : ''
-                }
-                {name}
-              </StyledNavLink>
-            ))}
-          </TabLinkBox>
-        </>
-      )
-    }
+  // function tabListView() {
+  //   if (isNavLink) {
+  //     return (
+  //       <>
+  //         <TabLinkBox>
+  //           {tabList.map(({ path, name, regex, iconUrl, iconActiveUrl }) => (
+  //             <StyledNavLink
+  //               key={path}
+  //               to={path}
+  //               isActive={(_, { pathname }) => Boolean(pathname.match(regex))}
+  //             > 
+  //               {
+  //                 iconActiveUrl && iconUrl ? (
+  //                   <div className='icon'>
+  //                     <img alt={''} src={pathname.match(regex) ? iconActiveUrl : iconUrl}/>
+  //                   </div>
+  //                 ) : ''
+  //               }
+  //               {name}
+  //             </StyledNavLink>
+  //           ))}
+  //         </TabLinkBox>
+  //       </>
+  //     )
+    // }
 
-    return (
-      <>
-        <TabLinkBox>
-          {tabList.map((item, index) => {
-            return (
-              <li
-                key={index}
-                className={
-                  !isNaN(currentTab) && Number(currentTab) === index ? 'active' :
-                  (tabIndex === index && isNaN(currentTab) ? 'active' : '')
-                }
-                onClick={() => {
-                  setTabIndex(index)
-                  setTabName(item.name)
-                  if (item?.onTabClick) item?.onTabClick(item.name)
-                }}
-              >
-                {
-                  item.iconActiveUrl && item.iconUrl ? (
-                    <div className="icon">
-                      {
-                        !isNaN(currentTab) && Number(currentTab) === index ? <img alt={''} src={item.iconActiveUrl} /> :
-                        (tabIndex === index && isNaN(currentTab) ? <img alt={''} src={item.iconActiveUrl} /> : <img alt={''} src={item.iconUrl} />)
-                      }
-                    </div>
-                    ) : (
-                      item.iconTxt ? (
-                        <div className={"icon" }>
-                          {item.iconTxt}
-                        </div>
-                      ) : ''
-                    )
-                }
-                {item.name}
-              </li>
-            )
-          })}
-        </TabLinkBox>
-      </>
-    )
-  }
+  //   return (
+  //     <>
+  //       <TabLinkBox>
+  //         {tabList.map((item, index) => {
+  //           return (
+  //             <li
+  //               key={index}
+  //               className={
+  //                 !isNaN(currentTab) && Number(currentTab) === index ? 'active' :
+  //                 (tabIndex === index && isNaN(currentTab) ? 'active' : '')
+  //               }
+  //               onClick={() => {
+  //                 setTabIndex(index)
+  //                 setTabName(item.name)
+  //                 if (item?.onTabClick) item?.onTabClick(item.name)
+  //               }}
+  //             >
+  //               {
+  //                 item.iconActiveUrl && item.iconUrl ? (
+  //                   <div className="icon">
+  //                     {
+  //                       !isNaN(currentTab) && Number(currentTab) === index ? <img alt={''} src={item.iconActiveUrl} /> :
+  //                       (tabIndex === index && isNaN(currentTab) ? <img alt={''} src={item.iconActiveUrl} /> : <img alt={''} src={item.iconUrl} />)
+  //                     }
+  //                   </div>
+  //                   ) : (
+  //                     item.iconTxt ? (
+  //                       <div className={"icon" }>
+  //                         {item.iconTxt}
+  //                       </div>
+  //                     ) : ''
+  //                   )
+  //               }
+  //               {item.name}
+  //             </li>
+  //           )
+  //         })}
+  //       </TabLinkBox>
+  //     </>
+  //   )
+  // }
+
   return (
     <>
       <TitleBox>
-        {
+        <TitleTxt>
+        {title}
+        {children}
+        </TitleTxt>
+        {/* {
           isChangeTitle ? (
             <TitleTxt>
               {title}
@@ -262,8 +268,8 @@ export default function Title({ title, tabList = [] , isNavLink = false, current
               {children}
             </TitleTxt>
           )
-        }
-        {tabList.length > 0 ? tabListView() : ''}
+        } */}
+        {/* {tabList.length > 0 ? tabListView() : ''} */}
       </TitleBox>
     </>
   )
