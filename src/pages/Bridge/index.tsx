@@ -801,7 +801,7 @@ export default function CrossChain() {
         ></Title> */}
         <AutoColumn gap={'sm'}>
         <ExternalLink href='https://bridge.soulswap.finance' target='_blank'>
-          Click Here For Mobile View
+          Click For Mobile
         </ExternalLink>
 
           <SelectCurrencyInputPanel

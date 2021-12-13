@@ -7,7 +7,7 @@ export const BodyWrapper = styled.div`
   height: 100%;
   padding: 2.5rem 70px;
   overflow:auto;
-  ${({ theme }) => theme.mediaWidth.upToMedium`
+  ${({ theme }) => theme.mediaWidth.upToLarge`
     padding: 0rem 0px;
   `};
 `
@@ -20,7 +20,7 @@ const BodyContent = styled.div`
   left: 320px;
   padding: 0rem 0px;
   overflow: auto;
-  ${({ theme }) => theme.mediaWidth.upToMedium`
+  ${({ theme }) => theme.mediaWidth.upToLarge`
     overflow:auto;
     padding: 16px;
     left:0;

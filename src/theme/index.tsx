@@ -16,7 +16,7 @@ const MEDIA_WIDTHS = {
   upToExtraSmall: 500,
   upToSmall: 720,
   upToMedium: 960,
-  upToLarge: 1180
+  upToLarge: 1800
 }
 
 const mediaWidthTemplates: { [width in keyof typeof MEDIA_WIDTHS]: typeof css } = Object.keys(MEDIA_WIDTHS).reduce(
@@ -42,12 +42,12 @@ export function colors(darkMode: boolean): Colors {
 
     // text
     text1: darkMode ? '#FFFFFF' : '#96989e',
-    text2: darkMode ? '#C3C5CB' : '#565A69',
-    text3: darkMode ? '#ddd' : '#999',
-    text4: darkMode ? '#565A69' : '#C3C5CB',
-    text5: darkMode ? 'rgb(21, 26, 47)' : '#EDEEF2',
-    textNav: darkMode ? '#979dac' : '#062536',
-    textColor: darkMode ? '#979dac' : '#031a6e',
+    text2: darkMode ? '#FFFFFF' : '#FFFFFFF',
+    text3: darkMode ? '#FFFFFF' : '#999',
+    text4: darkMode ? '#FFFFFF' : '#C3C5CB',
+    text5: darkMode ? '#FFFFFF' : '#EDEEF2',
+    textNav: darkMode ? '#FFFFFF' : '#062536',
+    textColor: darkMode ? '#FFFFFF' : '#031a6e',
     textColorBold: darkMode ? white : '#062536',
 
     // backgrounds / greys
@@ -106,20 +106,20 @@ export function colors(darkMode: boolean): Colors {
     // // borders
     // bsd1: darkMode ? '7px 2px 26px 0 rgba(5, 6, 13, 0.24)' : '7px 2px 26px 0 rgba(0, 0, 0, 0.06)',
 
-
     //specialty colors
     modalBG: darkMode ? 'rgba(0,0,0,.425)' : 'rgba(0,0,0,0.3)',
     advancedBG: darkMode ? 'rgba(0,0,0,0.1)' : 'rgba(255,255,255,0.6)',
 
     //primary colors
-    primary1: 'linear-gradient(to right, #734ce2 , #606bfb)',
+    // primary1: 'linear-gradient(to right, #734ce2 , #d9ca3f)',
+    primary1: '#000000',
     primary2: darkMode ? '#3680E7' : '#FF8CC3',
     primary3: darkMode ? '#4D8FEA' : '#5f6bfb',
     primary4: darkMode ? '#5f6bfb' : '#5f6bfb',
     primary5: darkMode ? '#5f6bfb' : '#5f6bfb',
 
     // color text
-    primaryText1: darkMode ? '#fff' : '#fff',
+    primaryText1: darkMode ? '#FFFFFF' : '#fff',
 
     // secondary colors
     secondary1: darkMode ? '#2172E5' : '#2483fe',
@@ -270,7 +270,7 @@ body {
 }
 
  a {
-   color: ${colors(false).blue1}; 
+   color: ${colors(false).white}; 
    font-family: 'Manrope', sans-serif !important;
  }
 
