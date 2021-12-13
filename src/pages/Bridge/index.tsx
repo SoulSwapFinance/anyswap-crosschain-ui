@@ -800,10 +800,6 @@ export default function CrossChain() {
           })()}
         ></Title> */}
         <AutoColumn gap={'sm'}>
-        <ExternalLink href='https://bridge.soulswap.finance' target='_blank'>
-          Click For Mobile
-        </ExternalLink>
-
           <SelectCurrencyInputPanel
             label={t('From')}
             value={inputBridgeValue}
@@ -928,11 +924,13 @@ export default function CrossChain() {
               <AddressInputPanel id="recipient" label={t('Recipient') + '( ' + t('receiveTip') + ' )'} value={recipient} onChange={setRecipient} isValid={false} />
             </>
           ): ''}
+        <ExternalLink href='https://bridge.soulswap.finance' target='_blank'>
+          Click Here For Mobile View
+        </ExternalLink>
           {
             p2pAddress ? <AddressInputPanel id="p2pAddress" value={p2pAddress} disabledInput={true} /> : ''
           }
         </AutoColumn>
-
         {/* <Reminder bridgeConfig={bridgeConfig} bridgeType='bridgeAssets' currency={selectCurrency} /> */}
         <Reminder bridgeConfig={bridgeConfig} bridgeType={destConfig?.type} currency={selectCurrency} selectChain={selectChain}/>
         {ButtonView('INIT')}

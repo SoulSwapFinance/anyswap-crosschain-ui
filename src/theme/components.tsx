@@ -87,7 +87,7 @@ export const StyledInternalLink = styled(Link)`
 const StyledLink = styled.a`
   text-decoration: none;
   cursor: pointer;
-  text-align: right;
+  text-align: center;
   // color: ${({ theme }) => theme.primary1};
   color:white;
   font-weight: 100;
